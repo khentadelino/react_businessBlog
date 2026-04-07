@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+@theme {
+  /* Primary gradient */
+  --color-primary: #2563eb;
+  --color-primary-light: #3b82f6;
+  --color-primary-dark: #1d4ed8;
+
+  --color-secondary: #4f46e5;
+
+  /* Text */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #e5e7eb;
+
+  /* Backgrounds */
+  --color-surface: #f3f4f6;
+
+  /* Custom gradient */
+  --background-image-hero: linear-gradient(to right, #2563eb, #4f46e5);
+}
