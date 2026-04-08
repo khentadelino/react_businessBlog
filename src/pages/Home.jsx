@@ -35,12 +35,12 @@ export default function Home() {
                         </p>
 
                         <div className="flex flex-col items-start gap-4 sm:flex-row">
-                            <button className="btn bg-white text-primary">
+                            <button className="btn bg-white text-primary transition duration-300 hover:bg-slate-500 hover:text-white">
                                 <span>Read Articles</span>
                                 <ArrowRight className="h-4 w-4" />
                             </button>
 
-                            <button className="btn border border-white text-white">
+                            <button className="btn border border-white text-white transition duration-300 hover:bg-white hover:text-primary">
                                 Get in Touch
                             </button>
                         </div>
@@ -59,13 +59,15 @@ export default function Home() {
                         {featuredBlogs.map((blog) => (
                             <article
                                 key={blog.id}
-                                className="grid overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]"
+                                className="group grid cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]"
                             >
-                                <img
-                                    src={blog.image}
-                                    alt={blog.title}
-                                    className="h-64 w-full object-cover md:h-full"
-                                />
+                                <div className="overflow-hidden">
+                                    <img
+                                        src={blog.image}
+                                        alt={blog.title}
+                                        className="h-64 w-full object-cover transition duration-300 group-hover:scale-105 md:h-full"
+                                    />
+                                </div>
 
                                 <div className="flex flex-col gap-4 p-6">
                                     <div className="flex flex-wrap items-center gap-3 text-xs font-semibold text-slate-500">
@@ -76,7 +78,9 @@ export default function Home() {
                                     </div>
 
                                     <div className="space-y-3">
-                                        <h3 className="text-2xl font-bold text-slate-900">{blog.title}</h3>
+                                        <h3 className="text-2xl font-bold text-black transition-colors duration-300 group-hover:text-primary">
+                                            {blog.title}
+                                        </h3>
                                         <p className="leading-7 text-slate-600">{blog.excerpt}</p>
                                     </div>
 
@@ -93,7 +97,7 @@ export default function Home() {
                                             </div>
                                         </div>
 
-                                        <button className="inline-flex items-center gap-2 text-sm font-semibold text-primary">
+                                        <button className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition duration-300 hover:translate-x-1">
                                             Read More
                                             <MoveRight className="h-4 w-4" />
                                         </button>
@@ -118,13 +122,15 @@ export default function Home() {
                         {featuredBusinesses.map((business) => (
                             <article
                                 key={business.id}
-                                className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+                                className="group cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
                             >
-                                <img
-                                    src={business.image}
-                                    alt={business.name}
-                                    className="h-52 w-full object-cover"
-                                />
+                                <div className="overflow-hidden">
+                                    <img
+                                        src={business.image}
+                                        alt={business.name}
+                                        className="h-52 w-full object-cover transition duration-300 group-hover:scale-105"
+                                    />
+                                </div>
 
                                 <div className="flex flex-col gap-4 p-5">
                                     <div className="flex items-center justify-between gap-3 text-xs font-semibold text-slate-500">
@@ -138,7 +144,7 @@ export default function Home() {
                                     </div>
 
                                     <div className="space-y-2">
-                                        <h3 className="text-xl font-bold text-slate-900">{business.name}</h3>
+                                        <h3 className="text-xl font-bold text-primary">{business.name}</h3>
                                         <p className="text-sm leading-6 text-slate-600">{business.description}</p>
                                     </div>
 
@@ -176,13 +182,15 @@ export default function Home() {
                         {topPerformers.map((business) => (
                             <article
                                 key={business.id}
-                                className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+                                className="group cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
                             >
-                                <img
-                                    src={business.image}
-                                    alt={business.name}
-                                    className="h-52 w-full object-cover"
-                                />
+                                <div className="overflow-hidden">
+                                    <img
+                                        src={business.image}
+                                        alt={business.name}
+                                        className="h-52 w-full object-cover transition duration-300 group-hover:scale-105"
+                                    />
+                                </div>
 
                                 <div className="flex flex-col gap-4 p-5">
                                     <div className="flex items-center justify-between gap-3">
@@ -193,7 +201,9 @@ export default function Home() {
                                     </div>
 
                                     <div className="space-y-2">
-                                        <h3 className="text-xl font-bold text-slate-900">{business.name}</h3>
+                                        <h3 className="text-xl font-bold text-black transition-colors duration-300 group-hover:text-primary">
+                                            {business.name}
+                                        </h3>
                                         <p className="text-sm leading-6 text-slate-600">{business.description}</p>
                                     </div>
 
@@ -225,7 +235,9 @@ export default function Home() {
                         Get weekly insights on market trends, business moves, and industry analysis
                         delivered straight to your inbox.
                     </p>
-                    <button className="btn bg-white text-primary">Subscribe Now</button>
+                    <button className="btn bg-white text-primary transition duration-300 hover:bg-slate-500 hover:text-white">
+                        Subscribe Now
+                    </button>
                 </div>
             </section>
 
