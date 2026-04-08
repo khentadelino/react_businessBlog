@@ -12,38 +12,35 @@ export default function Navbar() {
   ]
 
   return (
-    <header className="shadow">
+    <header className="sticky top-0 z-50 backdrop-blur bg-white/80 border-b border-slate-200">
       <nav className="mx-auto flex w-full max-w-6xl flex-col px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
-        <div className="flex items-center justify-between gap-4">
+
+        <div className="flex items-center justify-between">
           <NavLink
             to="/"
             className="flex items-center gap-3 text-lg font-semibold tracking-tight"
             onClick={() => setIsOpen(false)}
           >
-            <span
-              className="inline-flex h-10 w-10 items-center justify-center text-primary"
-              aria-hidden="true"
-            >
-              <PenLine />
+            <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+              <PenLine size={20} />
             </span>
             <span className="text-primary">BusinessBlog</span>
           </NavLink>
 
           <button
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-slate-200 text-slate-700 sm:hidden"
-            aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
-            aria-expanded={isOpen}
+            className="sm:hidden flex h-10 w-10 items-center justify-center rounded-md border border-slate-200 text-slate-700 hover:bg-slate-100 transition"
             onClick={() => setIsOpen((prev) => !prev)}
           >
-            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {isOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
 
         <div
-          className={`${
-            isOpen ? 'flex' : 'hidden'
-          } flex-col gap-3 pt-4 text-sm font-medium sm:flex sm:flex-row sm:items-center sm:justify-end sm:pt-0 sm:text-base`}
+          className={`
+            ${isOpen ? 'flex' : 'hidden'}
+            flex-col gap-3 pt-4 sm:flex sm:flex-row sm:items-center sm:gap-6 sm:pt-0
+          `}
         >
           {navItems.map((item) => (
             <NavLink
@@ -52,8 +49,11 @@ export default function Navbar() {
               end={item.to === '/'}
               onClick={() => setIsOpen(false)}
               className={({ isActive }) =>
-                `flex w-full justify-center rounded-md px-4 py-2 text-center transition-colors sm:w-20 ${
-                  isActive ? 'bg-primary text-white' : 'hover:bg-primary hover:text-white'
+                `relative px-4 py-2 text-sm font-medium transition-all duration-200 rounded-md
+                ${
+                  isActive
+                    ? 'text-white bg-primary shadow'
+                    : 'text-slate-700 hover:text-primary hover:bg-primary/10'
                 }`
               }
             >
@@ -61,6 +61,7 @@ export default function Navbar() {
             </NavLink>
           ))}
         </div>
+
       </nav>
     </header>
   )

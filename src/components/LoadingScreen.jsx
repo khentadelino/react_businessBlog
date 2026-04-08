@@ -2,7 +2,7 @@ import { HashLoader } from 'react-spinners'
 
 export default function LoadingScreen() {
     return (
-        <div className="flex min-h-screen flex-col items-center justify-center gap-8 bg-gradient-to-br from-slate-50 to-slate-100 px-6">
+        <div className="flex min-h-screen flex-col items-center justify-center gap-8 bg-linear-to-br from-slate-50 to-slate-100 px-6">
 
             {/* Branding */}
             <div className="space-y-3 text-center animate-pulse">
