@@ -35,9 +35,9 @@ export default function Footer() {
                     <div className="space-y-4">
                         <h3 className="text-sm text-primary">Contact</h3>
                         <div className="ms-2 flex flex-col gap-3 text-sm text-slate-400">
-                            <span>123 Business Ave</span>
-                            <span>New York, NY 10001</span>
-                            <span>hello@businessblog.com</span>
+                            <span>📍 123 Business Ave</span>
+                            <span>📞 New York, NY 10001</span>
+                            <span>✉️ hello@businessblog.com</span>
                         </div>
                     </div>
                 </div>
