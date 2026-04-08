@@ -42,18 +42,21 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+                <div className="mt-12 flex flex-col items-center text-center gap-4 border-t border-white/10 pt-6 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:text-left">
+
                     <p>&copy; 2026 BusinessBlog. All rights reserved.</p>
+
                     <button
                         type="button"
                         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                        className="inline-flex items-center gap-2 self-start transition hover:text-white sm:self-auto"
+                        className="inline-flex items-center gap-2 transition hover:text-white sm:self-auto"
                     >
                         Back to top
                         <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-slate-400 transition hover:bg-white/10 hover:text-white">
                             <ArrowUp className="h-4 w-4" />
                         </span>
                     </button>
+
                 </div>
             </div>
         </footer>
