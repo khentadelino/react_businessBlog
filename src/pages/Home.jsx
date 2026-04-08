@@ -146,7 +146,7 @@ export default function Home() {
                                     </div>
 
                                     <div className="space-y-2">
-                                        <h3 className="text-xl font-bold">{business.name}</h3>
+                                        <h3 className="text-xl font-bold group-hover:text-primary">{business.name}</h3>
                                         <p className="text-sm leading-6 text-slate-600">{business.description}</p>
                                     </div>
 
