@@ -1,4 +1,4 @@
-import { ArrowRight, CalendarDays, DollarSign, MapPin, MoveRight, Star, UserRound, Users } from 'lucide-react'
+import { ArrowRight, CalendarDays, DollarSign, MapPin, MoveRight, Star, TrendingUp, UserRound, Users } from 'lucide-react'
 import Footer from '../components/Footer'
 import blogs from '../data/blogs.json'
 import businesses from '../data/business.json'
@@ -18,14 +18,17 @@ function formatDate(date) {
 export default function Home() {
     return (
         <>
-            <section className="bg-linear-to-r from-primary to-secondary">
+            <section className="bg-linear-to-r from-primary to-secondary py-10">
                 <div className="mx-auto flex min-h-[calc(100vh-5rem)] w-full max-w-6xl items-center px-6 py-16 sm:py-20">
                     <div className="flex max-w-2xl flex-col items-start gap-6 text-white">
-                        <small className="text-sm font-semibold uppercase tracking-[0.3em]">
-                            Top Business Insight
-                        </small>
+                        <div className='flex items-center justify-center gap-2'>
+                            <TrendingUp className='text-sm' />
+                            <small className="text-sm font-semibold uppercase tracking-[0.3em]">
+                                Top Business Insights
+                            </small>
+                        </div>
 
-                        <h1 className="max-w-xl text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
+                        <h1 className="max-w-xl text-5xl font-semibold leading-tight lg:text-6xl">
                             Discover Industry Leaders &amp; Market Trends
                         </h1>
 
@@ -34,7 +37,7 @@ export default function Home() {
                             the strategies driving global business success.
                         </p>
 
-                        <div className="flex flex-col items-start gap-4 sm:flex-row">
+                        <div className="flex gap-4">
                             <button className="btn bg-white text-primary transition duration-300 hover:bg-slate-500 hover:text-white">
                                 <span>Read Articles</span>
                                 <ArrowRight className="h-4 w-4" />
@@ -51,8 +54,7 @@ export default function Home() {
             <section className="bg-white py-16 sm:py-20">
                 <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6">
                     <div className="flex items-center gap-2">
-                        <span className="h-2 w-2 rounded-full bg-amber-400" />
-                        <h2 className="text-2xl font-bold text-slate-900">Featured Stories</h2>
+                        <h2 className="text-2xl font-bold text-slate-900">🥇 Featured Stories</h2>
                     </div>
 
                     <div className="grid gap-6">
@@ -84,7 +86,7 @@ export default function Home() {
                                         <p className="leading-7 text-slate-600">{blog.excerpt}</p>
                                     </div>
 
-                                    <div className="mt-auto flex flex-col gap-4 pt-4 sm:flex-row sm:items-center sm:justify-between">
+                                    <div className="mt-auto flex gap-4 pt-4 flex-row items-center justify-between">
                                         <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500">
                                             <div className="flex items-center gap-3">
                                                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary p-2 text-sm font-bold text-white">
@@ -144,7 +146,7 @@ export default function Home() {
                                     </div>
 
                                     <div className="space-y-2">
-                                        <h3 className="text-xl font-bold text-primary">{business.name}</h3>
+                                        <h3 className="text-xl font-bold">{business.name}</h3>
                                         <p className="text-sm leading-6 text-slate-600">{business.description}</p>
                                     </div>
 

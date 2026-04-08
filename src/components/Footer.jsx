@@ -19,7 +19,7 @@ export default function Footer() {
                     <h3 className="text-sm text-primary">
                         Quick Links
                     </h3>
-                    <div className="flex flex-col gap-3 text-xs ms-2 text-slate-400">
+                    <div className="ms-2 flex flex-col gap-3 text-xs text-slate-400">
                         <a href="/" className="hover:text-white">
                             Home
                         </a>
@@ -36,10 +36,10 @@ export default function Footer() {
                     <h3 className="text-sm text-primary">
                         Contact
                     </h3>
-                    <div className="flex flex-col gap-3 text-xs ms-2 text-slate-400">
-                        <span>123 Business Ave</span>
-                        <span>New York, NY 10001</span>
-                        <span>hello@businessblog.com</span>
+                    <div className="ms-2 flex flex-col gap-3 text-xs text-slate-400">
+                        <span>📍 123 Business Ave</span>
+                        <span>📞 New York, NY 10001</span>
+                        <span>✉️ hello@businessblog.com</span>
                     </div>
                 </div>
             </div>
