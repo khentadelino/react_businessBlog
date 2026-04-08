@@ -30,8 +30,8 @@ export default function Contact() {
         <>
             <section className="bg-linear-to-r from-primary to-secondary py-16 text-white sm:py-20">
                 <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-5 px-6 text-center">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/20 bg-white/10">
-                        <Mail className="h-7 w-7" />
+                    <div className="flex h-14 w-14 items-center justify-center">
+                        <Mail className="h-10 w-10" />
                     </div>
                     <div className="space-y-3">
                         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Get in Touch</h1>
